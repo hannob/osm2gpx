@@ -54,7 +54,7 @@ def fetch_relation(rel):
 
     Returns an ElementTree root object (the <osm> node) for further processing.
     """
-    url = API_BASE+"relation/"+str(rel)+"/full"
+    url = API_BASE + "relation/" + str(rel) + "/full"
     try:
         f = urllib.request.urlopen(url)
     except urllib.error.HTTPError as e:
@@ -117,7 +117,7 @@ def build_gpx(rel):
         trkname.text = name
     desc = ET.SubElement(meta, "desc")
     desc.text = "OSM Relation #%s" % rel
-    ET.SubElement(meta, "link", href=LINK_BASE+str(rel))
+    ET.SubElement(meta, "link", href=LINK_BASE + str(rel))
     ET.SubElement(meta, "bounds", **bounds)
 
     # loop over the ways in the relation
@@ -129,6 +129,7 @@ def build_gpx(rel):
             ET.SubElement(trkseg, "trkpt", lat=str(ll[0]), lon=str(ll[1]))
 
     return root
+
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
