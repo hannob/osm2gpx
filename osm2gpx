@@ -9,10 +9,10 @@ import into other tools (for instance, a handheld GPS unit/GPS-equipped phone).
 Requires python3.
 
 Based on the perl script available at
-http://wiki.openstreetmap.org/wiki/Relations/Relations_to_GPX
+https://wiki.openstreetmap.org/wiki/Relations/Relations_to_GPX
 (updated in various ways)
 
-Uses OSM API v0.6 (see http://wiki.openstreetmap.org/wiki/API_v0.6)
+Uses OSM API v0.6 (see https://wiki.openstreetmap.org/wiki/API_v0.6)
 
 Usage:
 python3 osmrelation_to_gpx.py -o relation.gpx 12345678
@@ -28,8 +28,8 @@ import xml.etree.ElementTree as ET
 import sys
 import os
 
-API_BASE = "http://www.openstreetmap.org/api/0.6/"
-LINK_BASE = "http://www.openstreemap.org/relation/"
+API_BASE = "https://www.openstreetmap.org/api/0.6/"
+LINK_BASE = "https://www.openstreemap.org/relation/"
 GPX_ATTR = {"version": "1.1",
             "creator": "osmrelation_to_gpx",
             "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
