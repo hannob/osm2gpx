@@ -1,4 +1,6 @@
-# osm2gpx
+osmrel2gpx
+==========
+
 OpenStreetMap relation to GPX file converter
 
 what
